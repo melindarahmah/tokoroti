@@ -33,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,8 +56,94 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="karyawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="karyawan.Designer.cs">
+      <DependentUpon>karyawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota.Designer.cs">
+      <DependentUpon>Nota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pesanan.cs" />
+    <Compile Include="pesan\koneksi.cs" />
+    <Compile Include="placeorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="placeorder.Designer.cs">
+      <DependentUpon>placeorder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="tokorotiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tokorotiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tokorotiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tokorotiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tokorotiDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tokorotiDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tokorotiDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tokorotiDataSet6.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="karyawan.resx">
+      <DependentUpon>karyawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota.resx">
+      <DependentUpon>Nota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="placeorder.resx">
+      <DependentUpon>placeorder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +152,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,9 +164,104 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tokorotiDataSet.xsc">
+      <DependentUpon>tokorotiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet.xss">
+      <DependentUpon>tokorotiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet1.xsc">
+      <DependentUpon>tokorotiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet1.xss">
+      <DependentUpon>tokorotiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet2.xsc">
+      <DependentUpon>tokorotiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet2.xss">
+      <DependentUpon>tokorotiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet3.xsc">
+      <DependentUpon>tokorotiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet3.xss">
+      <DependentUpon>tokorotiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet4.xsc">
+      <DependentUpon>tokorotiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet4.xss">
+      <DependentUpon>tokorotiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet5.xsc">
+      <DependentUpon>tokorotiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet5.xss">
+      <DependentUpon>tokorotiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet6.xsc">
+      <DependentUpon>tokorotiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="tokorotiDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tokorotiDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tokorotiDataSet6.xss">
+      <DependentUpon>tokorotiDataSet6.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaStriker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
